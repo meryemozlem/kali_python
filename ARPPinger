@@ -32,5 +32,5 @@ class ARPPing():
         arp_ping=ARPPing()
         kullanici_girdisi= arp_ping.get_user_input()
 #kullanıcının girdiği ip adresini bana verecek.
-        arp.kullanici_girdisi.ipaddress
+        arp_ping.arp_istegi(kullanici_girdisi.ipaddress)
  else:
