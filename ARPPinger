@@ -11,5 +11,7 @@ class ARPPing():
         args=parser.parse_args()
         #print(args.ipaddress)
 
-        if args.ipaddress==None:
+        if args.ipaddress!=None:
+                return args
+        else:
                 print("ip adresini, -i argümanı ile gir")
