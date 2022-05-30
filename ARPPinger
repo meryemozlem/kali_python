@@ -1,9 +1,15 @@
 #python for kali
 import argparse
-parser=argparse.ArgumentParser()
-parser.add_argument('-i' , '--ipaddress' , type= str, help="ip adrsini gir.")
-args=parser.parse_args()
-print(args.ipaddress)
 
-if args.ipaddress==None:
-        print("ip adresini, -i argümanı ile gir")
+class ARPPing():
+        def __init__(self):
+        print("ARPPing başltıldı...")
+        
+        def get_user_input(self):
+        parser=argparse.ArgumentParser()
+        parser.add_argument('-i' , '--ipaddress' , type= str, help="ip adrsini gir.")
+        args=parser.parse_args()
+        #print(args.ipaddress)
+
+        if args.ipaddress==None:
+                print("ip adresini, -i argümanı ile gir")
