@@ -23,4 +23,4 @@ class ARPPing():
                 broadcast_packet= scapy.Ether(dst=ff:ff:ff:ff:ff:ff) 
                 ans, unans = scapy.srp(scapy.Ether(dst="ff:ff:ff:ff:ff:ff")/scapy.ARP(pdst="192.168.1.0/24"), timeout=2)
                 #2 paketi birleştirdik / ile. Bu bilgiyi documentation dan aldık.
-                combined_pcket= broadcast_packet / arp_reguest_packet
+                combined_packet= broadcast_packet / arp_reguest_packet
