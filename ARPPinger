@@ -30,5 +30,7 @@ class ARPPing():
  #sınıf içinde bir obje oluşturalım.               
  if __name__ == "__main__":
         arp_ping=ARPPing()
-        ip_aralıgı= arp_ping.get_user_input()
+        kullanici_girdisi= arp_ping.get_user_input()
+#kullanıcının girdiği ip adresini bana verecek.
+        kullanici_girdisi.ipaddress
  else:
