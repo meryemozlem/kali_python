@@ -21,6 +21,11 @@ class ARPPing():
         def arp_istegi(self,ip):
                 arp_request_packet = scapy.ARP(pdst=ip)
                 broadcast_packet= scapy.Ether(dst=ff:ff:ff:ff:ff:ff) 
-                ans, unans = scapy.srp(scapy.Ether(dst="ff:ff:ff:ff:ff:ff")/scapy.ARP(pdst="192.168.1.0/24"), timeout=2)
-                #2 paketi birleştirdik / ile. Bu bilgiyi documentation dan aldık.
                 combined_packet= broadcast_packet / arp_reguest_packet
+                #2 paketi birleştirdik / ile. Bu bilgiyi documentation dan aldık.
+                
+                
+                (answered_list, unanswered_list) = scapy.srp(combined_packet, timeout=2)
+                ans, unans = scapy.srp(scapy.Ether(dst="ff:ff:ff:ff:ff:ff")/scapy.ARP(pdst="192.168.1.0/24"), timeout=2)
+                
+                
