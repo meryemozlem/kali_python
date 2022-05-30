@@ -18,6 +18,9 @@ class ARPPing():
         else:
                 print("ip adresini, -i argümanı ile gir")
                 
-        def arp_istegi(self):
-                ans, unans = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst="192.168.1.0/24"), timeout=2)
-                
+        def arp_istegi(self,ip):
+                arp_request_packet = scapy.ARP(pdst=ip)
+                broadcast_packet= scapy.Ether(dst=ff:ff:ff:ff:ff:ff) 
+                ans, unans = scapy.srp(scapy.Ether(dst="ff:ff:ff:ff:ff:ff")/scapy.ARP(pdst="192.168.1.0/24"), timeout=2)
+                #2 paketi birleştirdik / ile. Bu bilgiyi documentation dan aldık.
+                combined_pcket= broadcast_packet / arp_reguest_packet
