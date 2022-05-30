@@ -1,5 +1,7 @@
 #python for kali
 import argparse
+import scapy.all as scapy
+
 
 class ARPPing():
         def __init__(self):
@@ -15,3 +17,7 @@ class ARPPing():
                 return args
         else:
                 print("ip adresini, -i argümanı ile gir")
+                
+        def arp_istegi(self):
+                ans, unans = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst="192.168.1.0/24"), timeout=2)
+                
